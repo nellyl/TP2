@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>CSS/HTML Workshop with Drivy</title>
+    <link rel ="stylesheet" href = "style.css">
+  </head>
+  <body><FONT face = "Trebuchet MS">
+    <h1><FONT face = "Trebuchet MS", size = "50"><b><font color = "blue">Car</font><font color = "grey">Rental</font></b></FONT></h1>
+    
+      <input type "text" name = "Model" id = "Model" placeholder = "Car model"/> 
+      <label for = "Model">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Rental begin date : </label>
+      <input class = "begin" type="date" placeholder="Rental begin date"/>
+      <label for = "Model">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Deductible option : </label>
+      <input class="option" type="checkbox" placeholder="Deductible option"/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      <button id="compute" >COMPUTE</button>
+    </br>  
+
+    <br>
+      <input type "text" name = "price-by-day" id = "price-by-day" placeholder = "Price by day"/>
+      <label for = "Model">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Rental end date : </label>
+      <input class="end" type="date" placeholder="Rental end date"/>
+    </br>
+
+    <br>
+      <input type "text" name = "price-by-km" id = "price-by-km" placeholder = "Price by km"/>
+      <label for = "Model">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Distance in km : </label>
+      <input class="distance" type="number" placeholder="Distance in km"/>
+    </br>  
+    </br></font>
+    
+    <div id="actors"></div>
+    <script id="template" type="x-tmpl-mustache">
+      {{#actors}}
+        <div class="actor">
+          <span>{{who}}</span>
+          <span>{{type}}</span>
+          <span>{{amount}}</span>
+        </div>
+      {{/actors}}
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mustache.js/2.2.1/mustache.min.js"></script>
+    <script src="drivy.js"></script>
+    <script src="index.js"></script>
+
+    <div id="slideShowImages">
+        <img src="image1.jpg" alt="Slide 1" style="float:center;width:1340px;height:600px"/>
+        <img src="image2.jpg" alt="Slide 2" style="float:center;width:1340px;height:600px"/> 
+        <img src="image3.jpg" alt="Slide 3" style="float:center;width:1340px;height:600px"/>
+        <img src="image4.jpg" alt="Slide 4" style="float:center;width:1340px;height:600px"/>    
+    </div>
+    <script src="slideShow.js"></script>
+</html>
